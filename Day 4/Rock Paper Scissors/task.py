@@ -26,32 +26,34 @@ scissors = '''
 '''
 
 import random
-player_choice_index = input("Let's play Rock Paper Scissors..."
+player_choice_index = int(input("Let's play Rock Paper Scissors..."
       "choose your hand, 0-rock, 1-paper, 2-scissors! "
-      "\nType the number ")
+      "\nType the number \n"))
 choices = [rock, paper, scissors]
 print(choices)
-int_choice = int(player_choice_index)
-your_choice = choices[int_choice]
-print("your hand: " + your_choice)
+#int_choice = int(player_choice_index)
+your_choice = choices[player_choice_index]
+print(f"you chose: {player_choice_index} \n{your_choice}")
+#print("your hand: " + your_choice)
 
 random_choice_enemy_index = random.randint(0, 2)
 random_choice_enemy = choices[random_choice_enemy_index]
-print("enemy hand: " + random_choice_enemy)
+print(f"Enemy choice: {random_choice_enemy_index} \n{random_choice_enemy}")
 
 #compare the choices' indices, 2>1, 1>0, 0>2
-if ((int_choice == 2 and random_choice_enemy_index == 0) or
-        (int_choice == 1 and random_choice_enemy_index == 2) or
-        (int_choice == 0 and random_choice_enemy_index == 1)):
-    print("You lose!")
-elif ((int_choice == 2 and random_choice_enemy_index == 1) or
-      (int_choice == 1 and random_choice_enemy_index == 0) or
-      (int_choice == 0 and random_choice_enemy_index == 2)):
-    print("You win!")
-elif int_choice == random_choice_enemy_index:
-    print("It's a tie!")
-else:
+if player_choice_index > 2:
     print("please choose rock, paper, or scissors!")
+elif ((player_choice_index == 2 and random_choice_enemy_index == 0) or
+        (player_choice_index == 1 and random_choice_enemy_index == 2) or
+        (player_choice_index == 0 and random_choice_enemy_index == 1)):
+    print("You lose!")
+elif ((player_choice_index == 2 and random_choice_enemy_index == 1) or
+      (player_choice_index == 1 and random_choice_enemy_index == 0) or
+      (player_choice_index == 0 and random_choice_enemy_index == 2)):
+    print("You win!")
+elif player_choice_index == random_choice_enemy_index:
+    print("It's a tie!")
+
 
 
 
