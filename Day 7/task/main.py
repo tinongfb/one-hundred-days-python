@@ -16,7 +16,7 @@ if guess in chosen_word:
 else:
     print("Wrong")
 
-
+#BELOW:SOLUTION
 # def rand_word_function():
 #     chosen_word = random.choice(word_list)
 #     return chosen_word
