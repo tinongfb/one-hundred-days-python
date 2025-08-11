@@ -55,11 +55,12 @@ stages = [r'''
       |
 =========
 ''']
+#NOTE : ALL PAGES' SOLUTIONS ARE IN THIS PAGE
 
 # TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
 # TODO-1: - Use a while loop to let the user guess again.
-# TODO-1: - Create a variable called 'lives' to keep track of the number of lives left.
-#  Set 'lives' to equal 6.
+# TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. Set 'lives' to equal 6.
+# TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 
 word_list = ["aardvark", "baboon", "camel"]
 lives = 6
