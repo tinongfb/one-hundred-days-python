@@ -1,7 +1,5 @@
 import random
 
-#NOTE : THE SOLUTION FOR THIS PAGE IS IN PAGE 2
-
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 
 lives = 6
@@ -14,9 +12,8 @@ print(logo)
 chosen_word = random.choice(word_list)
 letter_count = len(chosen_word)
 #print(f"chosen word '{chosen_word}' has {letter_count} letters")
-
+# TODO-6: - Update the code below to tell the user how many lives they have left.
 print(f"****************************{lives}/6 LIVES LEFT****************************")
-#print(f"Lives left: {lives}/6")
 print(f"The chosen word has {letter_count} letters")
 
 # placeholder = ""
@@ -92,6 +89,5 @@ while not game_over:
         #print("****************************YOU WIN****************************")
 
     # TODO-2: - Update the code below to use the stages List from the file hangman_art.py
-    # TODO-6: - Update the code below to tell the user how many lives they have left.
     print(f"Lives left: {lives}/6")
     print(stages[lives])
