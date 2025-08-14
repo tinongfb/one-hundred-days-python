@@ -8,3 +8,26 @@ def greet(name):
 
 name = input("What is your name? ")
 greet(name)
+
+
+# import random
+# alphabet = "abcdefghijklmnopqrstuvwxyz"
+# list_alphabet = list(alphabet)
+# random_letter = random.choice(list_alphabet)
+# list_alphabet.remove(random_letter)
+# print(list_alphabet)
+# random.shuffle(list_alphabet)
+# #print(list_alphabet)
+#
+# correct_guess = False
+# guesses = []
+# while correct_guess == False:
+#     letter_guess = input("Guess the random letter: ")
+#     if letter_guess == random_letter:
+#         correct_guess = True
+#         print(f"Correct! The random letter removed is {random_letter}")
+#         print(list_alphabet)
+#     else:
+#         print("Wrong guess.")
+#         guesses.append(letter_guess)
+#         print(guesses)
