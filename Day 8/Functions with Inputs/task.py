@@ -1,15 +1,17 @@
 #create the function
-def greet(name):
+def greet(name, location):
     print(f"Hello {name}")
-    print(f"How do you do, {name}?")
-    print(f"Bye, {name}")
-#call the function (run the function)
+    #print(f"How do you do, {name}?")
+    print(f"bla bla bla bla bla {location}")
+    #print(f"Bye, {name}")
+
+###  call the function (run the function)
+#name = input("What is your name? ")
+greet(name="Jack", location="boat")
 
 
-name = input("What is your name? ")
-greet(name)
 
-
+### this is another exercise ###
 # import random
 # alphabet = "abcdefghijklmnopqrstuvwxyz"
 # list_alphabet = list(alphabet)
