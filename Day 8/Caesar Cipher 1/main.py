@@ -15,13 +15,12 @@ def encrypt():
     for letter in original_text:
         if letter in alphabet:
             letter_index = alphabet.index(letter) + shift_amount
+# TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
             wrapped_index = letter_index % len(alphabet)
             encrypted_list.append(alphabet[wrapped_index])
     encrypted_text = ''.join(encrypted_list)
     print(f"The encrypted text is: {encrypted_text}")
     #print(f"The shift index is: {letter_index}")
-
-# TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
 
 # TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a
 #  message.
