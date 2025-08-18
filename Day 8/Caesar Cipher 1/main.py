@@ -15,7 +15,8 @@ def encrypt():
     for letter in original_text:
         if letter in alphabet:
             letter_index = alphabet.index(letter) + shift_amount
-            encrypted_list.append(alphabet[letter_index])
+            wrapped_index = letter_index % len(alphabet)
+            encrypted_list.append(alphabet[wrapped_index])
     encrypted_text = ''.join(encrypted_list)
     print(f"The encrypted text is: {encrypted_text}")
     #print(f"The shift index is: {letter_index}")
