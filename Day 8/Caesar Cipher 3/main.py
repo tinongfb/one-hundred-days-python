@@ -20,8 +20,10 @@ def caesar():
                 encrypted_list.append(alphabet[wrapped_index])
             elif " " in text:
                 encrypted_list.append(" ")
-            elif not letter.isalpha():
-                encrypted_list.append(letter)
+            ################### THIS IS NOT WORKING ###################
+            # elif not letter.isalpha():
+            #     encrypted_list.append(letter)
+            ################### THIS IS NOT WORKING ###################
         encrypted_text = ''.join(encrypted_list)
         print(f"The encrypted text is: {encrypted_text}")
     elif direction == '2':
