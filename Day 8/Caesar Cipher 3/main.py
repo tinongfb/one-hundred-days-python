@@ -18,6 +18,10 @@ def caesar():
                 letter_index = alphabet.index(letter) + shift_amount
                 wrapped_index = letter_index % len(alphabet)
                 encrypted_list.append(alphabet[wrapped_index])
+            elif " " in text:
+                encrypted_list.append(" ")
+            elif not letter.isalpha():
+                encrypted_list.append(letter)
         encrypted_text = ''.join(encrypted_list)
         print(f"The encrypted text is: {encrypted_text}")
     elif direction == '2':
@@ -28,6 +32,8 @@ def caesar():
                 letter_index = alphabet.index(letter) - shift_amount
                 wrapped_index = letter_index % len(alphabet)
                 decrypted_list.append(alphabet[wrapped_index])
+            elif " " in text:
+                decrypted_list.append(" ")
         decrypted_text = ''.join(decrypted_list)
         print(f"The decrypted text is: {decrypted_text}")
     else:
