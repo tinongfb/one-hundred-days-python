@@ -7,18 +7,19 @@ original_text=""
 def encrypt():
     original_text = input("Type your message:\n").lower()
     shift_amount = int(input("Type the shift number:\n"))
-
+    encrypted_text = ""
 # TODO-2: Inside the 'encrypt()' function, shift each letter of the 'original_text' forwards in the alphabet
 #  by the shift amount and print the encrypted text.
-    encrypted_list = []
+    #encrypted_list = []
     letter_index = 0
     for letter in original_text:
         if letter in alphabet:
             letter_index = alphabet.index(letter) + shift_amount
 # TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
             wrapped_index = letter_index % len(alphabet)
-            encrypted_list.append(alphabet[wrapped_index])
-    encrypted_text = ''.join(encrypted_list)
+            encrypted_text += alphabet[wrapped_index]
+            #encrypted_list.append(alphabet[wrapped_index])
+    #encrypted_text = ''.join(encrypted_list)
     print(f"The encrypted text is: {encrypted_text}")
     #print(f"The shift index is: {letter_index}")
 

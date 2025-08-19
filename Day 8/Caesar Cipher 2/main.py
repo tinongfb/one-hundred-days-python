@@ -12,24 +12,20 @@ shift_amount = int(input("Type the shift number:\n"))
 
 def caesar():
     if direction == '1':
-        encrypted_list = []
-        letter_index = 0
+        encrypted_text = ""
         for letter in text:
             if letter in alphabet:
                 letter_index = alphabet.index(letter) + shift_amount
                 wrapped_index = letter_index % len(alphabet)
-                encrypted_list.append(alphabet[wrapped_index])
-        encrypted_text = ''.join(encrypted_list)
+                encrypted_text += alphabet[wrapped_index]
         print(f"The encrypted text is: {encrypted_text}")
     elif direction == '2':
-        decrypted_list = []
-        letter_index = 0
+        decrypted_text = ""
         for letter in text:
             if letter in alphabet:
                 letter_index = alphabet.index(letter) - shift_amount
                 wrapped_index = letter_index % len(alphabet)
-                decrypted_list.append(alphabet[wrapped_index])
-        decrypted_text = ''.join(decrypted_list)
+                decrypted_text += (alphabet[wrapped_index])
         print(f"The decrypted text is: {decrypted_text}")
     else:
         pass
