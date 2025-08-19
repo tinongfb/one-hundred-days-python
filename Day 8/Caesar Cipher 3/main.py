@@ -18,12 +18,10 @@ def caesar():
                 letter_index = alphabet.index(letter) + shift_amount
                 wrapped_index = letter_index % len(alphabet)
                 encrypted_list.append(alphabet[wrapped_index])
-            elif " " in text:
+            elif letter == " " in text:
                 encrypted_list.append(" ")
-            ################### THIS IS NOT WORKING ###################
-            # elif not letter.isalpha():
-            #     encrypted_list.append(letter)
-            ################### THIS IS NOT WORKING ###################
+            elif letter not in alphabet:
+                encrypted_list.append(letter)
         encrypted_text = ''.join(encrypted_list)
         print(f"The encrypted text is: {encrypted_text}")
     elif direction == '2':
@@ -34,13 +32,16 @@ def caesar():
                 letter_index = alphabet.index(letter) - shift_amount
                 wrapped_index = letter_index % len(alphabet)
                 decrypted_list.append(alphabet[wrapped_index])
-            elif " " in text:
+            elif letter == " " in text:
                 decrypted_list.append(" ")
+            elif letter not in alphabet:
+                decrypted_list.append(letter)
         decrypted_text = ''.join(decrypted_list)
         print(f"The decrypted text is: {decrypted_text}")
     else:
         pass
 
+################### THIS IS NOT MY CODE ###################
 # def caesar(original_text, shift_amount, encode_or_decode):
 #     output_text = ""
 #
@@ -52,6 +53,7 @@ def caesar():
 #         shifted_position %= len(alphabet)
 #         output_text += alphabet[shifted_position]
 #     print(f"Here is the {encode_or_decode}d result: {output_text}")
+################### THIS IS NOT MY CODE ###################
 
 # TODO-3: Can you figure out a way to restart the cipher program?
 def ask_repeat():
@@ -70,11 +72,12 @@ should_cont = True
 while should_cont:
     should_cont = ask_repeat()
 
+################### THIS IS NOT MY CODE ###################
 # direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
 # text = input("Type your message:\n").lower()
 # shift = int(input("Type the shift number:\n"))
 #
 # caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
-
+################### THIS IS NOT MY CODE ###################
 
 
