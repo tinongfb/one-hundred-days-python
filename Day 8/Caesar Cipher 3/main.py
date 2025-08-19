@@ -6,9 +6,11 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 # TODO-2: What happens if the user enters a number/symbol/space?
 def caesar():
     while True:  # Keep asking until valid input
-        direction = input("Type '1' to encrypt, type '2' to decrypt:\n")
+        direction = input("Type '1' to encrypt, type '2' to decrypt, type '3' to exit:\n")
         if direction == '1' or direction == '2':
             break  # Exit the loop if valid
+        elif direction == '3':
+            exit()
         else:
             print("Invalid input. Please enter '1' or '2'.")
     text = input("Type your message:\n").lower()
